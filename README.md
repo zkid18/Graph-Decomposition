@@ -2,7 +2,7 @@
 
 Throughot of this practice, I will show an examples of finding a path between two given vertices.
 
-## Graph Representatiob
+## Graph Representation
 
 In this practice I will operate only undirected graphs, that can be represented in that way
 
