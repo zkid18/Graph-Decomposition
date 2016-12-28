@@ -1,8 +1,8 @@
 ## Decomposition of the graph
 
-Throughot of this practice, I will show an examples of finding a path between two given vertices.
+Throughot of this practice, I will show an examples of finding a path between two given vertices, searching for a cycle in a graph, topological sorting, 
 
-## Graph Representation
+## Graph Representatiob
 
 In this practice I will operate only undirected graphs, that can be represented in that way
 
