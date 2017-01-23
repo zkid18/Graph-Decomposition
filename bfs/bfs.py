@@ -7,27 +7,33 @@ def distance(adj, s, t):
 
     n = len(adj)
     queue = []
+    visited = set()
+    path = []
+
     queue.append([s])
-    visited = []
 
-    while queue:
+    dist = 0
+
+    while (len(queue) > 0):
         path = queue.pop(0)
-        node = path[-1]
 
-        # print(path)
-        # print(node)
+        last_vertex = path[-1]
 
-        for v in adj[node]:
-            new_path = list(path)
-            new_path.append(v)
-            queue.append(new_path)
+        if last_vertex == t:
+            # print(path)
+            dist = len(path)-1
 
-        if node == t:
-            return path
-        else:
-            return -1
+        elif last_vertex not in visited:
+            for w in adj[last_vertex]:
+                new_path = list(path)
+                new_path.append((w))
+                queue.append(new_path)
+            visited.add(last_vertex)
 
-
+    if dist != 0:
+        return dist
+    else:
+        return -1
 
 if __name__ == '__main__':
     input = sys.stdin.read()
